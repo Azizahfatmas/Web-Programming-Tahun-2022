@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        function login(){
+            let user = document.getElementById("username").value;
+            user = user.toLowerCase();
+            let pswd = document.getElementById("password").value;
+            pswd = pswd.toLowerCase();
+            // let w = window.open("text/html","replace");
+            if (user == "ahmad2017" && pswd == "integrity") {
+                alert("login berhasil")       
+                document.open("text/html","replace");
+                document.write("<h1>Login Sukses!</h1>");
+                document.close();
+            } else if (user == "" && pswd == "") {
+                alert("Username dan Password tidak boleh kosong")
+            }
+            else {
+                alert("login gagal")
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <h1>login</h1>
+        <form action="#login">
+            <input id="username" type="text" placeholder="Username"><br/>
+            <input id="password" type="password" placeholder="Password">
+            <button action="submit" onclick="login()">Login</button>
+            <p id="akses"></p>
+        </form>
+    </div>
+</body>
+</html>
