@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Kurs Rupiah - Mata Uang Asing</title>
+    <style>
+    fieldset {
+        background-color: aqua;
+    }
+    </style>
+    <script>
+        function hitung(){
+            if(kurs.value == "dollar US"){
+                let nilai = Number(document.getElementById("nilai").value);
+                let dollar US = 9915
+                let hasil = nilai * dollar US
+                document.getElementById("hasil").value=hasil
+            }
+            else if(kurs.value == "dollar Singapure"){
+                let nilai = Number(document.getElementById("nilai").value);
+                let dollar Singapure = 13472
+                let hasil = nilai * dollar Singapure
+                document.getElementById("hasil").value=hasil
+            }
+            else if(kurs.value == "Ringgit Malaysia"){
+                let nilai = Number(document.getElementById("nilai").value);
+                let Ringgit Malaysia = 874
+                let hasil = nilai * Ringgit Malaysia
+                document.getElementById("hasil").value=hasil
+            }
+            else if(kurs.value == "Euro"){
+                let nilai = Number(document.getElementById("nilai").value);
+                let Euro = 15888
+                let hasil = nilai * Euro
+                document.getElementById("hasil").value=hasil
+            }
+            else if(kurs.value == "Riyal Arab Saudi"){
+                let nilai = Number(document.getElementById("nilai").value);
+                let Riyal Arab Saudi = 3592
+                let hasil = nilai * Riyal Arab Saudi
+                document.getElementById("hasil").value=hasil
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset><legend>Kurs Rupiah - Mata Uang Asing</legend>
+    <input type="text" id="nilai" onchange="hitung">
+    <select>
+        <option value="1" selected>dollar US</option>
+        <option value="2" selected>dollar Singapure</option>
+        <option value="3" selected>Ringgit Malaysia</option>
+        <option value="4" selected>Yen Jepang</option>
+        <option value="5" selected>Euro</option>
+        <option value="6" selected>Riyal Arab Saudi</option>
+    </select>
+    <input type="text" id="hasil">
+    </fieldset>
+</body>
+</html>
