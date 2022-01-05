@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout FlexBox & Grid 6.3</title>
+    <style>
+        * {
+            background: khaki;
+            margin: 10px;
+            color: white;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        header,footer {
+            background: grey;
+            height: 80px;
+            width: 92%;
+            padding-top: 15px;
+        }
+
+        header>p {
+            background: grey;
+            padding-top: 10px;
+        }
+
+        footer>p {
+            display: flex;
+            flex-direction: row;
+            background: grey;
+            padding-top: 10px;
+        }
+
+        .container {
+            display: flex;
+            height: 330px;
+            width: 100%;
+            margin: 5px;
+        }
+
+        aside {
+            background: brown;
+            height: 310px;
+            width: 30%;
+        }
+
+        aside>p {
+            background: brown;
+            padding-top: 50px;
+        }
+
+        article {
+            background: lightblue;
+            height: 310px;
+            width: 60%;
+        }
+
+        article>p {
+            background: lightblue;
+            padding-top: 10px;
+        }
+
+        .img {
+            display: flex;
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>Header</p>
+    </header>
+    <div class="container">
+        <aside>
+            <p>Aside</p>
+        </aside>
+        <article>
+            <p>Article </p>
+            <div class="img">
+                <img src="koala.jpg" width="240" height="200">
+                <img src="koala.jpg" width="240" height="200">
+                <img src="koala.jpg" width="240" height="200'">
+            </div>
+        </article>
+    </div>
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>
